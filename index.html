@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>乔</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-overlay">
+        <div id="app">
+            <!-- 登录部分 -->
+            <div id="login-section">
+                <h2>登录</h2>
+                <input type="text" id="username" placeholder="用户名">
+                <button onclick="login()">登录</button>
+                <p>没有账号？<a href="#" onclick="showRegister()">立即注册</a></p>
+            </div>
+
+            <!-- 注册部分 -->
+            <div id="register-section" style="display: none;">
+                <h2>注册新账号</h2>
+                <input type="text" id="new-username" placeholder="输入新用户名">
+                <button onclick="handleRegister()">注册</button>
+                <p><a href="#" onclick="backToLogin()">← 返回登录</a></p>
+            </div>
+
+            <!-- 微博发布部分 -->
+            <div id="post-section" style="display: none;">
+                <h2>发布新微博</h2>
+                <textarea id="post-content" placeholder="你想说什么..."></textarea>
+                <input type="file" id="post-image" accept="image/*">
+                <button onclick="postWeibo()">发布</button>
+                <button onclick="logout()" style="margin-left: 10px; background-color: #dc3545; color: white;">退出登录</button>
+            </div>
+
+            <!-- 微博展示区域 -->
+            <div id="feed"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
